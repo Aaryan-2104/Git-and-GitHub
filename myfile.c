@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 // An iterative binary search function.
-int binarySearch(int arr[], int l, int r, int x)
+int binarySearch(int arr[], int w, int r, int x)
 {
-	while (l <= r) {
-		int m = l + (r - l) / 2;
+	while (w <= r) {
+		int m = w + (r - w) / 2;
 
 		// Check if x is present at mid
 		if (arr[m] == x)
@@ -27,7 +27,7 @@ int binarySearch(int arr[], int l, int r, int x)
 // Driver code
 int main(void)
 {
-	int arr[] = { 2, 3, 4, 10, 40 };
+	int arr[] = { 1, 3, 4, 20, 40 };
 	int n = sizeof(arr) / sizeof(arr[0]);
 	int x = 10;
 	int result = binarySearch(arr, 0, n - 1, x);
